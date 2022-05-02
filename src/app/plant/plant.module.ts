@@ -7,7 +7,7 @@ import { PlantListComponent } from './plant-list/plant-list.component';
   imports: [
     CommonModule
   ],
-  exports: [PlantListComponent],
+  exports: [PlantComponent],
   declarations: [
     PlantComponent,
     PlantListComponent
