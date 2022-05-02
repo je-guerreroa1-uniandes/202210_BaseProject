@@ -1,3 +1,27 @@
-<p>
-  plant-list works!
-</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="h4">#</th>
+                        <th class="h4">Nombre común</th>
+                        <th class="h4">Tipo</th>
+                        <th class="h4">Clima</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plant of plants">
+                        <td>{{ plant.id }}</td>
+                        <td>{{ plant.nombre_comun }}</td>
+                        <td>{{ plant.tipo }}</td>
+                        <td>{{ plant.clima }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
