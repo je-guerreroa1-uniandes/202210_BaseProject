@@ -19,6 +19,21 @@ export class PlantListComponent implements OnInit {
     });
   }
 
+  exteriorPlantsTotal(): number {
+    let plantsTotal = this.plants.reduce(function(accumulatedTotal, currentPlant){
+      if (currentPlant.tipo == 'Exterior') {
+        return accumulatedTotal + 1;
+      } else {
+        return accumulatedTotal;
+      }
+    }, 0);
+    return plantsTotal;
+  }
+
+  interiorPlantsTotal(): number {
+    return this.plants.length - this.exteriorPlantsTotal();
+  }
+
   ngOnInit() {
     this.getPlants();
   }
